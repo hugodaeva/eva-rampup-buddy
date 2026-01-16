@@ -1,11 +1,13 @@
 export const Footer = () => {
+  const baseUrl = import.meta.env.BASE_URL;
+
   return (
     <footer className="py-12 border-t border-border mt-auto">
       <div className="container-main">
         <div className="grid md:grid-cols-2 gap-8 mb-8 items-start">
           <div className="flex flex-col gap-4">
             <img
-              src="/logo-horizontal.png"
+              src={`${baseUrl}logo-horizontal.png`}
               alt="Eva People"
               className="h-8 w-auto object-contain"
               style={{ minHeight: '13px', minWidth: '70px' }}

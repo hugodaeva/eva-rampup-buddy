@@ -11,6 +11,7 @@ const navItems = [
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('');
+  const baseUrl = import.meta.env.BASE_URL;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,7 +75,7 @@ export const Header = () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}>
             <img
-              src="/logo-horizontal.png"
+              src={`${baseUrl}logo-horizontal.png`}
               alt="Eva People"
               className="h-7 lg:h-8 w-auto object-contain"
               style={{ minHeight: '13px', minWidth: '70px' }}

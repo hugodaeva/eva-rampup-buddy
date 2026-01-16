@@ -8,6 +8,7 @@ export const HeroSection = () => {
   const ref1 = getRef(1);
   const ref2 = getRef(2);
   const ref4 = getRef(4);
+  const baseUrl = import.meta.env.BASE_URL;
 
   return (
     <section id="hero" className="relative min-h-[90vh] flex flex-col justify-center pt-28 lg:pt-24 overflow-hidden">
@@ -69,7 +70,7 @@ export const HeroSection = () => {
             <div className="absolute top-0 left-0 w-[85%] z-20 mock-card bg-background/90 backdrop-blur-md border-primary/20 shadow-xl p-3 transform -rotate-1 hover:rotate-0 transition-transform duration-300">
               <div className="flex items-start gap-3">
                 <div className="w-8 h-8 rounded-lg overflow-hidden flex-shrink-0 shadow-sm border border-border bg-white">
-                  <img src="/logo-symbol.png" alt="Eva" className="w-full h-full object-cover" />
+                  <img src={`${baseUrl}logo-symbol.png`} alt="Eva" className="w-full h-full object-cover" />
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center justify-between mb-0.5">
